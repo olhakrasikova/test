@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+}
+
+#navigation {
+    width: 250px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: #053346;
+}
+
+.sidenav {
+    height: 100%;
+}
+
+.sidenav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidenav a {
+    padding: 0.5vh;
+    text-decoration: none;
+    font-size: 1.9vh;
+    color: black;
+    display: block;
+    background-color: #0E5E7F;
+}
+
+.sidenav a:hover {
+    background-color: white;
+    color: #0E5E7F;
+    cursor: pointer;
+}
+
+h1 {
+    margin: 0;
+    align-self: stretch;
+
+    border-left: 1px solid #000;
+}
+
+.header{
+    font-size: x-large;
+    background-color: #A8B2BA;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-left: 250px;
+}
+
+.contentInner {
+    max-width: 600px;
+
+    margin-top: 20px;
+}
+
+video {
+    width: 100%;
+}
+
+.menuButton {
+    display: none;
+    position: fixed;
+    top: 4px;
+    left: 10px;
+    z-index: 999;
+    padding-left: 1.25em;
+    height: 20px;
+}
+.menuButton:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.25em;
+    width: 1em;
+    height: 0.15em;
+    background: black;
+    box-shadow:
+            0 0.25em 0 0 black,
+            0 0.5em 0 0 black;
+}
+
+
+@media (max-width: 880px) {
+    #navigation {
+        left: -250px;
+        transition: ease 1s;
+    }
+
+    main {
+        padding-left: 0;
+        transition: ease 1s;
+    }
+
+    .header {
+        padding-left: 36px;
+    }
+
+    .menuButton {
+        display: block;
+    }
+
+
+    main.showMenu
+    {
+        padding-left: 250px;
+        transition:  ease 1s;
+    }
+
+    .sidenav.showMenu
+    {
+        padding-left: 250px;
+        transition:  ease 1s;
+    }
+}
+
